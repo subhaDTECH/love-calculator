@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center_div{
+                 display: grid;
+                 place-items: center;
+                 margin-top: 100px;
+                 /* background-color: rgb(39, 39, 33); */
+                 width: 70vw;
+                 margin:0  auto;
+                 margin-top: 60px;
+                 background-color: #efef;
+        }
+        h2{
+            color: #fff;
+        }
+        input{
+            margin: 10px 5px;
+            padding: 10px 30px;
+            text-align: center;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+        }
+        #nm1,#nm2{
+             background-color: rgb(27, 9, 103);
+             color: #fff;
+             font-size: 20px;
+             text-align: center;
+        }
+        ::placeholder{
+            color: #fff;
+        }
+        #btn{
+           background-color: green;
+           color: #fff;
+           cursor: pointer;
+        }
+        body{
+            background-color: rgb(11, 11, 52);
+            background-size: cover;
+            background-position: center;
+        }
+        #love{
+            outline: none;
+            border: none;
+            background-color: rgba(0,0,0,0.7);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="center_div">
+    <h2 class="text-white">love calculator</h2>
+         <input type="text"name="nm1"placeholder="Enter your name"id="nm1">
+         ❤️❤️💗
+         <input type="text"name="nm2"placeholder="Enter your love name"id="nm2"><br>
+          <input type="text"name="lovepre"placehoolder="love percentage"id="love"placeholder="your love percentage "><br>
+         <input type="button"value="submit"name="button"id="btn"onclick="love()">
+</div>
+<script>
+    const love=(e)=>{
+        let name1=document.getElementById('nm1').value;
+        let name2=document.getElementById('nm2').value;
+        let love=document.getElementById('love');
+        if(name1!=''|| name2!=''){
+               
+            let randomNo=Math.floor(Math.random()*100+1);
+            love.value=randomNo+"%";
+            alert("GOD BLESS YOUR LOVE")
+
+        }else{
+            alert("plz enter the name ")
+        }
+       
+       
+    }
+</script>
+</body>
+</html>
